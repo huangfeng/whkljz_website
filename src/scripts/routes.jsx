@@ -1,0 +1,15 @@
+var React = require("react"),
+    Router = require("react-router"),
+    Route = Router.Route,
+    DefaultRoute = Router.DefaultRoute;
+
+var Main = require("./pages/main"),
+    Home = require("./pages/home");
+
+var routes = (
+  <Route path="/" handler={Main} name="app">
+    <DefaultRoute handler={Home}/>
+  </Route>
+);
+
+module.exports = routes;

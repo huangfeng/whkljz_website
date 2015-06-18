@@ -1,0 +1,35 @@
+{
+  "name": "whkljz",
+  "version": "1.0.0",
+  "authors": [
+    "huangfeng <huangfeng_82@sina.com>"
+  ],
+  "description": "武汉康乐家政网站",
+  "license": "MIT",
+  "homepage": "http://www.whkljz.com.cn",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "html5shiv": "~3.7.2",
+    "modernizr": "~2.8.3",
+    "normalize.css": "~3.0.3",
+    "es5-shim": "~4.1.3",
+    "respondJS": "~1.4.2",
+    "ie8": "~0.2.5",
+    "responsive": "~4.1.0",
+    "fontawesome": "~4.3.0",
+    "jquery.appear.js": "~0.3.6",
+    "tinynav": "*",
+    "jquery.nicescroll": "~3.6.0",
+    "css3-mediaqueries-js": "~1.0.0",
+    "quotersrotator": "*",
+    "jquery-prettyPhoto": "~3.1.6",
+    "carouFredSel": "~6.2.1"
+  }
+}
