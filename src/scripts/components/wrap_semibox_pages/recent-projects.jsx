@@ -4,39 +4,37 @@ var React = require("react"),
 var RecentProjects = React.createClass({
 
   componentDidMount : function() {
-    $(window).load(function(){
-      $('#carousel-projects').carouFredSel({
-        responsive: true,
-        items: {
-          width: 200,
-          height: 295,
-          visible: {
-            min: 1,
-            max: 4
-          }
-        },
-        width: '200px',
-        height: '295px',
-        auto: true,
-        circular	: false,
-        infinite	: false,
-        prev : {
-          button		: "#car_prev",
-          key			: "left",
-        },
-        next : {
-          button		: "#car_next",
-          key			: "right",
-        },
-        swipe: {
-          onMouse: true,
-          onTouch: true
-        },
-        scroll: {
-            easing: "",
-            duration: 1200
+    $('#carousel-projects').carouFredSel({
+      responsive: true,
+      items: {
+        width: 200,
+        height: 295,
+        visible: {
+          min: 1,
+          max: 4
         }
-      });
+      },
+      width: '200px',
+      height: '295px',
+      auto: true,
+      circular	: false,
+      infinite	: false,
+      prev : {
+        button		: "#car_prev",
+        key			: "left",
+      },
+      next : {
+        button		: "#car_next",
+        key			: "right",
+      },
+      swipe: {
+        onMouse: true,
+        onTouch: true
+      },
+      scroll: {
+          easing: "",
+          duration: 1200
+      }
     });
     $("a[data-gal^='prettyPhoto']").prettyPhoto({social_tools:'', animation_speed: 'normal' , theme: 'dark_rounded'});
     $(".roll").css("opacity","0");

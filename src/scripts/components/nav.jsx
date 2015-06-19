@@ -20,7 +20,7 @@ var Navigation = React.createClass({
       active: 'selected', // String: Set the "active" class
       header: '导航 +', // String: Specify text for "header" and show header instead of the active item
       label: '' // String: Sets the <label> text for the <select> (if not set, no label will be added)
-    });     
+    });
     $(window).scroll(function () {
       if ($(document).scrollTop() == 0) {
         $('.wowmenu').removeClass('tiny');
@@ -35,8 +35,9 @@ var Navigation = React.createClass({
     return (
       /*jshint ignore:start */
       <Navbar fixedTop brand={brand} className="wowmenu">
-        <Nav className="pull-right" activeKey={1} id="nav">
+        <Nav className="pull-right" id="nav">
           <NavItemLink eventKey={1} to="/">首页</NavItemLink>
+          <NavItemLink eventKey={2} to="aboutus">关于我们</NavItemLink>
         </Nav>
       </Navbar>
       /*jshint ignore:end */

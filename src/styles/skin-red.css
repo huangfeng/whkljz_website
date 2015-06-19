@@ -1,17 +1,17 @@
 .colortext {	color:#f54828;}
 .colorbg {background:#f54828;}
 a {	color:#f54828;}
-::selection{background:#f54828;}
-.navbar-nav>li.active>a,.navbar-nav>li.active>a:hover,.navbar-nav>li.active>a:focus {background-color:#f54828;}
-.navbar-nav>li.active>a:before,.navbar-nav>li>a:hover:before,.navbar-nav>li>a:focus:before,.extra-nav-class a.dropdown-toggle:before {border-bottom:6px solid #f54828;}
-.navbar-nav>li>a:hover,.navbar-nav>li>a:focus {	background-color:#f54828;}
+::selection{background:#f54828 !Important;}
+.navbar-nav>li.active>a,.navbar-nav>li.active>a:hover,.navbar-nav>li.active>a:focus {background-color:#f54828 !Important;}
+.navbar-nav>li.active>a:before,.navbar-nav>li>a:hover:before,.navbar-nav>li>a:focus:before,.extra-nav-class a.dropdown-toggle:before {border-bottom:6px solid #f54828 !Important;;}
+.navbar-nav>li>a:hover,.navbar-nav>li>a:focus {	background-color:#f54828 !Important;}
 .dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus {background-color:#f54828 !Important;}
 .extra-nav-class a.dropdown-toggle {	background-color:#f54828 !Important;}
-.car-highlight1 {background-color:#f54828;}
+.car-highlight1 {background-color:#f54828 !Important;}
 .car-smallcircle {background:#f54828;}
 .carouselText2 {	background:#f54828;}
-.icon-box-top i:hover {background-color:#f54828;}
-.fontawesome-icon.circle-white {	color:#f54828;}
+.icon-box-top i:hover {background-color:#f54828 !Important;}
+.fontawesome-icon.circle-white {	color:#f54828; }
 .grey-box-icon:hover .fontawesome-icon.circle-white,.grey-box-icon.active .fontawesome-icon.circle-white,.active i.fontawesome-icon {background-color:#f54828;}
 .home-features .icon {background:#f54828;}
 .copyright {	background-color:#f54828;}
@@ -20,8 +20,8 @@ a {	color:#f54828;}
 .panel,.panel2 {	border-left:8px solid #f54828;}
 .btn-default {background-color:#f54828;}
 .btn-minimal:hover {	color: #f54828;}
-#accordion div h4:before {	background:#f54828 url("../img/plus.png"/*tpa=http://www.wowthemes.net/demo/calypso/img/plus.png*/) center center no-repeat;}
-#accordion div.active h4:before {background:#f54828 url("../img/minus.png"/*tpa=http://www.wowthemes.net/demo/calypso/img/minus.png*/) center center no-repeat;}
+#accordion div h4:before {	background:#f54828 url("assets/images/plus.png") center center no-repeat;}
+#accordion div.active h4:before {background:#f54828 url("assets/images/minus.png") center center no-repeat;}
 .sidebar h4 {color:#f54828;}
 .nav-tabs>.active>a,.nav-tabs>.active>a:hover {color: #f54828 !important;}
 blockquote {border-left:5px solid #f54828;}

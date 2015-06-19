@@ -1,4 +1,5 @@
-var React = require("react");
+var React = require("react"),
+    Link = require("react-router").Link;
 
 var SemiboxEnd = React.createClass({
 
@@ -13,7 +14,7 @@ var SemiboxEnd = React.createClass({
             </p>
           </div>
           <div className="text-center topspace20">
-            <a href="#" className="buttonblack"><i className="fa fa-briefcase"></i>&nbsp; 关于我们</a>
+            <Link to="aboutus" className="buttonblack"><i className="fa fa-briefcase"></i>&nbsp; 关于我们</Link>
             <a href="#" className="buttoncolor"><i className="icon-link"></i>&nbsp; 联系我们</a>
           </div>
         </div>

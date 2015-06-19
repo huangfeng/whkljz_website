@@ -1,4 +1,5 @@
-var React = require("react");
+var React = require("react"),
+    Link = require("react-router").Link;
 
 var Copyright = React.createClass({
 
@@ -14,8 +15,8 @@ var Copyright = React.createClass({
             </div>
             <div className="col-md-8">
               <ul className="footermenu pull-right">
-                <li><a href="#">首页</a></li>
-                <li><a href="#">关于我们</a></li>
+                <li><Link to="/">首页</Link></li>
+                <li><Link to="aboutus">关于我们</Link></li>
                 <li><a href="#">服务类型</a></li>
                 <li><a href="#">家政资讯</a></li>
                 <li><a href="#">联系我们</a></li>

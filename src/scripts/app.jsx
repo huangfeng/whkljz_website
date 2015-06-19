@@ -8,7 +8,7 @@ var actions = require("./actions.jsx"),
 
 var router = Router.create({
   routes: routes,
-  location: Router.HistoryLocation
+  location: Router.HashLocation
 });
 
 var stores = {
