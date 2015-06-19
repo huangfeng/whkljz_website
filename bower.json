@@ -45,6 +45,7 @@
     "jquery": {
       "main": [
         "dist/jquery.min.js",
+        "dist/jquery.js",
         "dist/jquery.min.map"
       ]
     },
