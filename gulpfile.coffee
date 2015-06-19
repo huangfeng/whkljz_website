@@ -182,11 +182,11 @@ gulp.task 'build', ['webpack:build', 'css', 'copy-assets-ignore-html', 'bower-co
 
 # gulp dev
 # description -- start a development server
-gulp.task 'dev', ['copy-assets', 'bower-copy'], ->
+gulp.task 'dev', ['copy-assets-ignore-html', 'bower-copy', 'minify-html'], ->
 
   runSequence('css', 'webpack-dev-server', () ->
     gulp.watch(['src/styles/**'], ['css'])
-    gulp.watch(['assets/**'], ['copy-assets'])
+    gulp.watch(['assets/**'], ['copy-assets-ignore-html'])
   )
 
  # gulp dev-tdd

@@ -39,6 +39,16 @@ var RecentProjects = React.createClass({
       });
     });
     $("a[data-gal^='prettyPhoto']").prettyPhoto({social_tools:'', animation_speed: 'normal' , theme: 'dark_rounded'});
+    $(".roll").css("opacity","0");
+    $(".roll").hover(function () {
+      $(this).stop().animate({
+        opacity: .8
+      }, "slow");
+    }, function () {
+      $(this).stop().animate({
+        opacity: 0
+      }, "slow");
+    });
   },
 
   render : function() {

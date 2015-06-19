@@ -16,13 +16,13 @@
   ],
   "dependencies": {
     "bootstrap": "~3.3.4",
+    "jquery": "~2.1.4",
     "html5shiv": "~3.7.2",
     "modernizr": "~2.8.3",
     "normalize.css": "~3.0.3",
     "es5-shim": "~4.1.3",
     "respondJS": "~1.4.2",
     "ie8": "~0.2.5",
-    "responsive": "~4.1.0",
     "fontawesome": "~4.3.0",
     "jquery.appear.js": "~0.3.6",
     "tinynav": "*",
@@ -31,5 +31,73 @@
     "quotersrotator": "*",
     "jquery-prettyPhoto": "~3.1.6",
     "carouFredSel": "~6.2.1"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+            "less/bootstrap.less",
+            "dist/js/bootstrap.min.js",
+            "dist/fonts/**",
+            "dist/css/bootstrap.min.css",
+            "dist/css/bootstrap.css.map"
+      ]
+    },
+    "jquery": {
+      "main": [
+        "dist/jquery.min.js",
+        "dist/jquery.min.map"
+      ]
+    },
+    "html5shiv": {
+      "main": "dist/htmlshiv.min.js"
+    },
+    "modernizr": {
+      "main": "modernizr.js"
+    },
+    "normalize.css": {
+      "main": "normalize.css"
+    },
+    "es5-shim": {
+      "main": [
+        "es5-shim.min.js",
+        "es5-sham.min.js",
+        "es5-shim.map",
+        "es5-sham.map"
+      ]
+    },
+    "respondJS": {
+      "main": "respond.min.js"
+    },
+    "ie8": {
+      "main": "ie8.js"
+    },
+    "fontawesome": {
+      "main": [
+        "css/font-awesome.min.css",
+        "fonts/**",
+        "font-awesome.css.map"
+      ]
+    },
+    "jquery.appear.js": {
+      "main": "jquery.appear.js"
+    },
+    "tinynav": {
+      "main": "tinynav.min.js"
+    },
+    "jquery.nicescroll": {
+      "main": "jquery.nicescroll.min.js"
+    },
+    "css3-mediaqueries-js": {
+      "main": "css3-mediaqueries.js"
+    },
+    "quotersrotator": {
+      "main": "js/jquery.cbpQTRotator.min.js"
+    },
+    "jquery-prettyPhoto": {
+      "main": "js/jquery.prettyPhoto.js"
+    },
+    "carouFredSel": {
+      "main": "jquery.carouFredSel-6.2.1-packed.js"
+    }
   }
 }
