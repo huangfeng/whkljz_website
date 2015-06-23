@@ -1,4 +1,7 @@
 var React = require("react"),
+    Intro = require("../components/wrap_semibox_pages/intro"),
+    TeamMembers = require("../components/wrap_semibox_pages/team-members"),
+    Customers = require("../components/wrap_semibox_pages/customers"),
     SemiboxEnd = require("../components/wrap_semibox_pages/semibox-end");
 
 var AboutUs = React.createClass({
@@ -18,6 +21,9 @@ var AboutUs = React.createClass({
           <div className="semiboxshadow text-center">
       			<img src="assets/images/shp.png" className="img-responsive" alt="" />
       		</div>
+          <Intro/>
+          <TeamMembers/>
+          <Customers/>
           <SemiboxEnd/>
         </div>
       </section>
