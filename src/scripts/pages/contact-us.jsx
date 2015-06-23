@@ -1,6 +1,6 @@
 var React = require("react"),
     AddressMap = require("../components/wrap_semibox_pages/address-map"),
-    ContactDetail = require("../components/wrap_semibox_pages/contact-detail"),
+    Customers = require("../components/wrap_semibox_pages/customers"),
     SemiboxEnd = require("../components/wrap_semibox_pages/semibox-end");
 
 var ContactUs = React.createClass({
@@ -21,7 +21,7 @@ var ContactUs = React.createClass({
             <img src="assets/images/shp.png" className="img-responsive" alt="" />
           </div>
           <AddressMap/>
-          <ContactDetail/>
+          <Customers/>
           <SemiboxEnd/>
         </div>
       </section>

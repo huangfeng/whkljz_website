@@ -64,49 +64,49 @@ var Customers = React.createClass({
   								<li>
   								<div className="featured-projects">
   									<div className="featured-projects-image">
-  										<a href="#"><img src="assets/images/brands/1.png" className="imgOpa grayimage" alt="保利花园"/></a>
+  										<a href="javascript:"><img src="assets/images/brands/1.png" className="imgOpa grayimage" alt="保利花园"/></a>
   									</div>
   								</div>
   								</li>
   								<li>
   								<div className="featured-projects">
   									<div className="featured-projects-image">
-                      <a href="#"><img src="assets/images/brands/2.png" className="imgOpa grayimage" alt="长城建设"/></a>
+                      <a href="javascript:"><img src="assets/images/brands/2.png" className="imgOpa grayimage" alt="长城建设"/></a>
   									</div>
   								</div>
   								</li>
   								<li>
   								<div className="featured-projects">
   									<div className="featured-projects-image">
-                      <a href="#"><img src="assets/images/brands/3.png" className="imgOpa grayimage" alt="成熙英语"/></a>
+                      <a href="javascript:"><img src="assets/images/brands/3.png" className="imgOpa grayimage" alt="成熙英语"/></a>
   									</div>
   								</div>
   								</li>
   								<li>
   								<div className="featured-projects">
   									<div className="featured-projects-image">
-                    <a href="#"><img src="assets/images/brands/4.png" className="imgOpa grayimage" alt="光谷新世界"/></a>
+                    <a href="javascript:"><img src="assets/images/brands/4.png" className="imgOpa grayimage" alt="光谷新世界"/></a>
                     </div>
   								</div>
   								</li>
   								<li>
   								<div className="featured-projects">
   									<div className="featured-projects-image">
-                    <a href="#"><img src="assets/images/brands/5.png" className="imgOpa grayimage" alt="江南家园"/></a>
+                    <a href="javascript:"><img src="assets/images/brands/5.png" className="imgOpa grayimage" alt="江南家园"/></a>
                     </div>
   								</div>
   								</li>
   								<li>
   								<div className="featured-projects">
   									<div className="featured-projects-image">
-                    <a href="#"><img src="assets/images/brands/6.png" className="imgOpa grayimage" alt="谓语城"/></a>
+                    <a href="javascript:"><img src="assets/images/brands/6.png" className="imgOpa grayimage" alt="谓语城"/></a>
                     </div>
   								</div>
   								</li>
   								<li>
   								<div className="featured-projects">
   									<div className="featured-projects-image">
-                    <a href="#"><img src="assets/images/brands/7.png" className="imgOpa grayimage" alt="金地太阳城"/></a>
+                    <a href="javascript:"><img src="assets/images/brands/7.png" className="imgOpa grayimage" alt="金地太阳城"/></a>
                     </div>
   								</div>
   								</li>

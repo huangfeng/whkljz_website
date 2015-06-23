@@ -9,7 +9,6 @@ var React = require("react"),
 var Navigation = React.createClass({
 
   componentDidMount : function() {
-    console.log("start render navigation");
     $('.navbar .dropdown').hover(function() {
       $(this).addClass('extra-nav-class').find('.dropdown-menu').first().stop(true, true).delay(50).slideDown();
     }, function() {
