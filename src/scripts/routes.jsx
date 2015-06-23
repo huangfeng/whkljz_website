@@ -5,12 +5,14 @@ var React = require("react"),
 
 var Main = require("./pages/main"),
     Home = require("./pages/home"),
-    AboutUs = require("./pages/about-us");
+    AboutUs = require("./pages/about-us"),
+    ContactUs = require("./pages/contact-us");
 
 var routes = (
   <Route path="/" handler={Main} name="app">
     <DefaultRoute handler={Home}/>
     <Route handler={AboutUs} name="aboutus" />
+    <Route handler={ContactUs} name="contactus" />
   </Route>
 );
 

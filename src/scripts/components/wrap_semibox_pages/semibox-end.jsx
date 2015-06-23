@@ -15,7 +15,7 @@ var SemiboxEnd = React.createClass({
           </div>
           <div className="text-center topspace20">
             <Link to="aboutus" className="buttonblack"><i className="fa fa-briefcase"></i>&nbsp; 关于我们</Link>
-            <a href="#" className="buttoncolor"><i className="icon-link"></i>&nbsp; 联系我们</a>
+            <Link to="contactus" className="buttoncolor"><i className="icon-link"></i>&nbsp; 联系我们</Link>
           </div>
         </div>
       </div>

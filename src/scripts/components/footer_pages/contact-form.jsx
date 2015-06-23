@@ -1,14 +1,22 @@
 var React = require("react"),
+    Alert = require("react-bootstrap").Alert,
     $ = window.$;
 
 var ContactForm = React.createClass({
 
+  getInitialState() {
+    return {
+      alertVisible: false
+    };
+  },
+
   componentDidMount : function() {
-  $('#submit').click(function () {
+    var _this = this;
+    $('#submit').click(function () {
 
   		//Get the data from all the fields
-  		var name = $('input[name=name]');
-  		var phone = $('input[name=phone]');
+  		var name = $('input[name=bd_bp_messName]');
+  		var phone = $('input[name=bd_bp_messPhone]');
   		var regexMobile = /^1\d{10}$/;
       var regexPhone = /^0\d{2,3}-?\d{7,8}$/;
   		var message = $('textarea[name=message]');
@@ -41,73 +49,52 @@ var ContactForm = React.createClass({
   		if(returnError == true){
   			return false;
   		}
+      $("#baiduMessagePostForm").submit();
 
-  		//organize the data
-  		var data = {
-        'bd_bp_messName': encodeURIComponent(name.val()),
-        'bd_bp_messPhone': phone.val(),
-        'bd_bp_messText': encodeURIComponent(message.val()),
-        'bd_bp_tick': '1434591035071',
-        'bd_bp_bid': 'ca71a1601da1f04ddff248fd',
-        'bd_bp_title': encodeURIComponent('武汉市洪山区康乐家政服务中心_专业提供月嫂、育婴师、钟点工、保姆、保洁、护工等家政服务')
-      }
-
-  		//disabled all the text fields
-  		$('.text').attr('disabled','true');
-
-  		//show the loading sign
-  		$('.loading').show();
-
-      $.support.cors = true;
-  		//start the ajax
-  		$.ajax({
-  			//this is the php file that processes the data and sends email
-  			url: "http://qiao.baidu.com/v3/?module=default&controller=index&action=doMess&siteid=3154243&page_id=&ucid=5585554",
-
-  			//GET method is used
-  			type: "POST",
-
-  			//pass the data
-  			data: data,
-
-  			//Do not cache the page
-  			cache: false,
-
-        contentType: "application/x-www-form-urlencoded",
-
-        dataType: "html",
-
-  			//success
-  			success: function (html) {
-          //show the success message
-          $('.done').fadeIn('slow');
-          $(".form").find('input[type=text], textarea').val("");
-  			}
-  		});
-
-  		//cancel the submit button default behaviours
-  		return false;
-  	});
+      _this.handleAlertShow();
+      $(".form").find('input[type=text], textarea').val("");
+    });
   },
 
   render : function() {
+    var baiduMessagePostStyle = {
+      display: "none"
+    };
+    var alertMessage = <div></div>;
+    if (this.state.alertVisible) {
+      alertMessage = (
+        <Alert bsStyle='success' onDismiss={this.handleAlertDismiss}>
+        您的留言已经发出。谢谢！
+        </Alert>
+      );
+    }
     return (
       <div className="col-md-3">
         <h1 className="title">请您<span className="colortext">留言</span></h1>
-        <div className="done">
-          <div className="alert alert-success">
-            <button type="button" className="close" data-dismiss="alert">×</button>
-            您的留言已经发出。谢谢！
-          </div>
-        </div>
+        {alertMessage}
+        <form id="baiduMessagePostForm" action="http://qiao.baidu.com/v3/?module=default&controller=index&action=doMess&siteid=3154243&page_id=&ucid=5585554"
+          method="post" encType="application/x-www-form-urlencoded" target="baiduMessagePost" className="form">
         <div className="form">
-          <input className="col-md-6" type="text" name="name" placeholder="姓名" />
-          <input className="col-md-6" type="text" name="phone" placeholder="联系方式" />
-          <textarea className="col-md-12" name="message" rows="4" placeholder="请您在此留言，我们将尽快与您联系。"></textarea>
+          <input className="col-md-6" type="text" name="bd_bp_messName" placeholder="姓名" />
+          <input className="col-md-6" type="text" name="bd_bp_messPhone" placeholder="联系方式" />
+          <textarea className="col-md-12" name="bd_bp_messName" rows="4" placeholder="请您在此留言，我们将尽快与您联系。"></textarea>
+          <input type="hidden" name="bd_bp_tick" value="1434591035071" />
+          <input type="hidden" name="bd_bp_bid" value="ca71a1601da1f04ddff248fd" />
+          <input type="hidden" name="bd_bp_title" value="武汉市洪山区康乐家政服务中心_专业提供月嫂、育婴师、钟点工、保姆、保洁、护工等家政服务" />
           <input type="button" id="submit" className="btn" value="发送" />
         </div>
+        </form>
+        <iframe name="baiduMessagePost" style={baiduMessagePostStyle}/>
       </div>
     );
+  },
+
+  handleAlertDismiss() {
+    this.setState({alertVisible: false});
+  },
+
+  handleAlertShow() {
+    this.setState({alertVisible: true});
   }
 
 });

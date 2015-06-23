@@ -38,6 +38,7 @@ var Navigation = React.createClass({
         <Nav className="pull-right" id="nav">
           <NavItemLink eventKey={1} to="/">首页</NavItemLink>
           <NavItemLink eventKey={2} to="aboutus">关于我们</NavItemLink>
+          <NavItemLink eventKey={3} to="contactus">联系我们</NavItemLink>
         </Nav>
       </Navbar>
       /*jshint ignore:end */
