@@ -8,6 +8,18 @@ var React = require("react"),
 
 var Navigation = React.createClass({
 
+  getInitialState() {
+    return {
+      menuType: this.props.menuType,
+      servicesActive: false,
+      blogsActive: false
+    };
+  },
+
+  componentWillMount: function() {
+
+  },
+
   componentDidMount : function() {
     $('.navbar .dropdown').hover(function() {
       $(this).addClass('extra-nav-class').find('.dropdown-menu').first().stop(true, true).delay(50).slideDown();
@@ -33,21 +45,30 @@ var Navigation = React.createClass({
     var brand = <a className="navbar-brand logo-nav" href="#"><img src="assets/images/logo.png" alt="武汉康乐家政"/></a>
     return (
       /*jshint ignore:start */
-      <Navbar fixedTop brand={brand} className="wowmenu">
+      <Navbar fixedTop={true} brand={brand} className="wowmenu">
         <Nav className="pull-right" id="nav">
-          <NavItemLink eventKey={1} to="/">首页</NavItemLink>
-          <NavItemLink eventKey={2} to="aboutus">关于我们</NavItemLink>
-          <DropdownButton eventKey={3} title='服务类型' navItem={true}>
-            <MenuItemLink to="/service/hourlyWorker" eventKey='1'>钟点工服务</MenuItemLink>
-            <MenuItemLink to="/service/nursemaid" eventKey='2'>育婴师、月嫂服务</MenuItemLink>
-            <MenuItemLink to="/service/nanny" eventKey='3'>家庭保姆服务</MenuItemLink>
-            <MenuItemLink to="/service/clearing" eventKey='4'>开荒保洁服务</MenuItemLink>
+          <NavItemLink eventKey={1} to="/" onClick={this.clearOtherActive}>首页</NavItemLink>
+          <NavItemLink eventKey={2} to="aboutus" onClick={this.clearOtherActive}>关于我们</NavItemLink>
+          <DropdownButton eventKey={3} title='服务类型' navItem={true} className={(this.state.servicesActive || this.state.menuType == "service") ? "active" : ""}>
+            <MenuItemLink to="/service/hourlyWorker" eventKey={3.1} onClick={this.setServicesActive}>钟点工服务</MenuItemLink>
+            <MenuItemLink to="/service/nursemaid" eventKey={3.2} onClick={this.setServicesActive}>育婴师、月嫂服务</MenuItemLink>
+            <MenuItemLink to="/service/nanny" eventKey={3.3} onClick={this.setServicesActive}>家庭保姆服务</MenuItemLink>
+            <MenuItemLink to="/service/clearing" eventKey={3.4} onClick={this.setServicesActive}>开荒保洁服务</MenuItemLink>
           </DropdownButton>
-          <NavItemLink eventKey={4} to="contactus">联系我们</NavItemLink>
+          <NavItemLink eventKey={4} to="contactus" onClick={this.clearOtherActive}>联系我们</NavItemLink>
         </Nav>
       </Navbar>
       /*jshint ignore:end */
     );
+  },
+
+  setServicesActive: function() {
+    this.clearOtherActive();
+    this.setState({servicesActive: true});
+  },
+
+  clearOtherActive: function() {
+    this.setState({servicesActive: false, blogsActive: false});
   }
 
 });

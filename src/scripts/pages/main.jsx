@@ -126,13 +126,19 @@ var Main = React.createClass({
       /*jshint ignore:start */
       <div className="wrapbox">
         <TopArea />
-        <Navigation />
+        <Navigation ref="nav"/>
         {/* this is the important part */}
-        <RouteHandler />
+        <RouteHandler setMenuType={this.setMenuType} />
         <Footer/>
       </div>
       /*jshint ignore:end */
     );
+  },
+
+  setMenuType: function(newMenuType) {
+    if (newMenuType == "services") {
+      this.refs.nav && this.refs.nav.setServicesActive();
+    }
   }
 
 });

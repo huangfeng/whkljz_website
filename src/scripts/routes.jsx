@@ -14,7 +14,7 @@ var routes = (
     <DefaultRoute handler={Home}/>
     <Route handler={AboutUs} name="aboutus" />
     <Route handler={Services} name="services">
-      <Route handler={Services} path="service/:serviceType"/>
+      <Route handler={Services} path="/service/:serviceType" />
     </Route>
     <Route handler={ContactUs} name="contactus" />
   </Route>

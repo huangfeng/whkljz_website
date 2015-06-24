@@ -17,7 +17,7 @@ var Intro = React.createClass({
           <div className="row">
             <div className="col-md-12">
               <p>
-              <span className="drop-cap round">武</span>汉市洪山区康乐家政服务中心系经工商局注册（工商注册号：420111600437078)政府相关职能部门备案的经营实体，属湖北省家政行业协会单位。专业致力于高级家政管理服务企事业单位公共保洁、家庭钟点工服务，也是本市第一家采用网络智能化管理的家政服务中心。
+              <span className="drop-cap round">武</span>汉市洪山区康乐家政服务中心系经工商局注册（工商注册号：420111600437078)政府相关职能部门备案的经营实体，属湖北省家政行业协会单位。专业致力于高级家政管理服务、企事业单位公共保洁、家庭钟点工服务，也是本市第一家采用网络智能化管理的家政服务中心。
               </p>
               <p className="text-center">
                 <img alt="关于我们" src="assets/images/demo/aboutus.jpg" className="img-responsive aligncenter"/>
