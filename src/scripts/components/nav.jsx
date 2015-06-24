@@ -38,10 +38,10 @@ var Navigation = React.createClass({
           <NavItemLink eventKey={1} to="/">首页</NavItemLink>
           <NavItemLink eventKey={2} to="aboutus">关于我们</NavItemLink>
           <DropdownButton eventKey={3} title='服务类型' navItem={true}>
-            <MenuItemLink to="service/hourlyWorker" eventKey='1'>钟点工服务</MenuItemLink>
-            <MenuItemLink to="service/nursemaid" eventKey='2'>育婴师、月嫂服务</MenuItemLink>
-            <MenuItemLink to="service/nanny" eventKey='3'>家庭保姆服务</MenuItemLink>
-            <MenuItemLink to="service/clearing" eventKey='4'>开荒保洁服务</MenuItemLink>            
+            <MenuItemLink to="/service/hourlyWorker" eventKey='1'>钟点工服务</MenuItemLink>
+            <MenuItemLink to="/service/nursemaid" eventKey='2'>育婴师、月嫂服务</MenuItemLink>
+            <MenuItemLink to="/service/nanny" eventKey='3'>家庭保姆服务</MenuItemLink>
+            <MenuItemLink to="/service/clearing" eventKey='4'>开荒保洁服务</MenuItemLink>
           </DropdownButton>
           <NavItemLink eventKey={4} to="contactus">联系我们</NavItemLink>
         </Nav>
