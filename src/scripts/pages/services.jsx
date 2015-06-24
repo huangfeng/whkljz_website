@@ -2,6 +2,7 @@ var React = require("react"),
     ServiceBox = require("../components/wrap_semibox_pages/service-box"),
     Customers = require("../components/wrap_semibox_pages/customers"),
     SemiboxEnd = require("../components/wrap_semibox_pages/semibox-end"),
+    HourlyWorker = require("../components/services/hourly-worker"),
     Link = require("react-router").Link;
 
 var Services = React.createClass({
@@ -11,9 +12,7 @@ var Services = React.createClass({
       services: {
         "hourlyWorker": {
           "title": "钟点工服务",
-          "info": (
-            <h1 className="smalltitle"><br/><span>钟点工服务简介</span></h1>
-          )
+          "info": <HourlyWorker/>
         },
         "nursemaid": {
           "title": "育婴师、月嫂服务",
@@ -58,6 +57,7 @@ var Services = React.createClass({
             <img src="assets/images/shp.png" className="img-responsive" alt="" />
           </div>
           {serviceItem}
+          <hr/>
           <ServiceBox/>
           <Customers/>
           <SemiboxEnd/>
