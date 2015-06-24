@@ -136,8 +136,10 @@ var Main = React.createClass({
   },
 
   setMenuType: function(newMenuType) {
-    if (newMenuType == "services") {
+    if (newMenuType && newMenuType == "services") {
       this.refs.nav && this.refs.nav.setServicesActive();
+    } else if (newMenuType && newMenuType == "blogs") {
+      this.refs.nav && this.refs.nav.setBlogsActive();
     }
   }
 

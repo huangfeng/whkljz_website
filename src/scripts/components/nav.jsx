@@ -10,14 +10,9 @@ var Navigation = React.createClass({
 
   getInitialState() {
     return {
-      menuType: this.props.menuType,
       servicesActive: false,
       blogsActive: false
     };
-  },
-
-  componentWillMount: function() {
-
   },
 
   componentDidMount : function() {
@@ -49,7 +44,7 @@ var Navigation = React.createClass({
         <Nav className="pull-right" id="nav">
           <NavItemLink eventKey={1} to="/" onClick={this.clearOtherActive}>首页</NavItemLink>
           <NavItemLink eventKey={2} to="aboutus" onClick={this.clearOtherActive}>关于我们</NavItemLink>
-          <DropdownButton eventKey={3} title='服务类型' navItem={true} className={(this.state.servicesActive || this.state.menuType == "service") ? "active" : ""}>
+          <DropdownButton eventKey={3} title='服务类型' navItem={true} className={this.state.servicesActive ? "active" : ""}>
             <MenuItemLink to="/service/hourlyWorker" eventKey={3.1} onClick={this.setServicesActive}>钟点工服务</MenuItemLink>
             <MenuItemLink to="/service/nursemaid" eventKey={3.2} onClick={this.setServicesActive}>育婴师、月嫂服务</MenuItemLink>
             <MenuItemLink to="/service/nanny" eventKey={3.3} onClick={this.setServicesActive}>家庭保姆服务</MenuItemLink>
@@ -65,6 +60,11 @@ var Navigation = React.createClass({
   setServicesActive: function() {
     this.clearOtherActive();
     this.setState({servicesActive: true});
+  },
+
+  setBlogsActive: function() {
+    this.clearOtherActive();
+    this.setState({blogsActive: true});
   },
 
   clearOtherActive: function() {
