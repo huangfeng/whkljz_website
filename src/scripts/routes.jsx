@@ -7,6 +7,7 @@ var Main = require("./pages/main"),
     Home = require("./pages/home"),
     AboutUs = require("./pages/about-us"),
     Services = require("./pages/services"),
+    Press = require("./pages/press")
     ContactUs = require("./pages/contact-us");
 
 var routes = (
@@ -15,6 +16,8 @@ var routes = (
     <Route handler={AboutUs} name="aboutus" />
     <Route handler={Services} name="services">
       <Route handler={Services} path="/service/:serviceType" />
+    </Route>
+    <Route handler={Press} name="press">
     </Route>
     <Route handler={ContactUs} name="contactus" />
   </Route>

@@ -11,7 +11,7 @@ var RecentProjects = React.createClass({
         height: 295,
         visible: {
           min: 1,
-          max: 4
+          max: 3
         }
       },
       width: '200px',
@@ -54,13 +54,14 @@ var RecentProjects = React.createClass({
       <section className="grayarea recent-projects-home topspace30 animated fadeInUpNow notransition">
       <div className="container">
         <div className="row">
-          <h1 className="small text-center topspace0">图片新闻</h1>
-          <p className="animated fadeInRightNow notransition text-center topspace20">
-             康乐家政竭诚为您服务！
-          </p>
-          <div className="text-center smalltitle">
-          </div>
-          <div className="col-md-12">
+          <div className="col-md-8">
+            <h1 className="small text-center topspace0">图片新闻</h1>
+            <p className="animated fadeInRightNow notransition text-center topspace20">
+               康乐家政竭诚为您服务！
+            </p>
+            <div className="text-center smalltitle">
+            </div>
+
             <div className="list_carousel text-center">
               <div className="carousel_nav">
                 <a className="prev" id="car_prev" href="#"><span>上一条</span></a>
@@ -140,12 +141,60 @@ var RecentProjects = React.createClass({
                   </div>
                   <h1><a href="projectdetail.html">庆贺康乐家政街道口店开张</a></h1>
                   <p>
-                     康乐家政为拓展业务并更好的为江城人民服务，特选址街道口附近区域，作为另一分店。
+                     为拓展业务并更好的为江城人民服务，在街道口附近区域另设一分店。
                   </p>
                 </div>
                 </li>
               </ul>
             </div>
+          </div>
+          <div className="col-md-4 animated fadeInLeft notransition">
+            <h1 className="small text-center topspace0">公告板</h1>
+            <p className="animated fadeInRightNow notransition text-center topspace20">
+               康乐家政最新动态及优惠
+            </p>
+            <div className="text-center smalltitle">
+            </div>
+            <div className="panel">
+    					<div>
+                <ul className="unstyled">
+                  <li>
+                  <div className="post-info">
+                    <h4><a href=""> 热烈庆祝康乐家政中南店搬迁至街道口未来城</a></h4>
+                    <div className="post-meta">
+                       2012年2月1日
+                    </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div className="post-info">
+                    <h4><a href=""> 祝康乐家政新老客户及全体员工端午节快乐！</a></h4>
+                    <div className="post-meta">
+                       2011-05-28
+                    </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div className="post-info">
+                    <h4><a href=""> 春节临近，找家政得提前一周</a></h4>
+                    <div className="post-meta">
+                       2011-01-16
+                    </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div className="post-info">
+                    <h4><a href=""> 春节临近，需要年末大扫除的家庭请提早预定</a></h4>
+                    <div className="post-meta">
+                       2011-01-03
+                    </div>
+                  </div>
+                  </li>
+                </ul>
+    					</div>
+              <a href="#" className="readmore pull-right">更多… <i className="icon-double-angle-right"></i></a>
+    				</div>
+
           </div>
         </div>
       </div>

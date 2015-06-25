@@ -11,7 +11,7 @@ var Navigation = React.createClass({
   getInitialState() {
     return {
       servicesActive: false,
-      blogsActive: false
+      pressActive: false
     };
   },
 
@@ -44,13 +44,20 @@ var Navigation = React.createClass({
         <Nav className="pull-right" id="nav">
           <NavItemLink eventKey={1} to="/" onClick={this.clearOtherActive}>首页</NavItemLink>
           <NavItemLink eventKey={2} to="aboutus" onClick={this.clearOtherActive}>关于我们</NavItemLink>
-          <DropdownButton eventKey={3} title='服务项目' navItem={true} className={this.state.servicesActive ? "active" : ""}>
+          <DropdownButton eventKey={3} title="服务项目" navItem={true} className={this.state.servicesActive ? "active" : ""}>
             <MenuItemLink to="/service/hourlyWorker" eventKey={3.1} onClick={this.setServicesActive}>钟点工服务</MenuItemLink>
             <MenuItemLink to="/service/nursemaid" eventKey={3.2} onClick={this.setServicesActive}>育婴师、月嫂服务</MenuItemLink>
             <MenuItemLink to="/service/nanny" eventKey={3.3} onClick={this.setServicesActive}>家庭保姆服务</MenuItemLink>
             <MenuItemLink to="/service/clearing" eventKey={3.4} onClick={this.setServicesActive}>开荒保洁服务</MenuItemLink>
           </DropdownButton>
-          <NavItemLink eventKey={4} to="contactus" onClick={this.clearOtherActive}>联系我们</NavItemLink>
+          <DropdownButton eventKey={4} title="家政资讯" navItem={true} className={this.state.pressActive ? "active" : ""}>
+            <MenuItemLink to="/" eventKey={4.1} onClick={this.setServicesActive}>康乐公告板</MenuItemLink>
+            <MenuItemLink to="/" eventKey={4.2} onClick={this.setServicesActive}>康乐图片新闻</MenuItemLink>
+            <MenuItemLink to="/" eventKey={4.3} onClick={this.setServicesActive}>生活宝典</MenuItemLink>
+            <MenuItemLink to="/" eventKey={4.4} onClick={this.setServicesActive}>居家饮食</MenuItemLink>
+            <MenuItemLink to="/" eventKey={4.5} onClick={this.setServicesActive}>早教保健</MenuItemLink>
+          </DropdownButton>
+          <NavItemLink eventKey={5} to="contactus" onClick={this.clearOtherActive}>联系我们</NavItemLink>
         </Nav>
       </Navbar>
       /*jshint ignore:end */
@@ -62,13 +69,13 @@ var Navigation = React.createClass({
     this.setState({servicesActive: true});
   },
 
-  setBlogsActive: function() {
+  setPressActive: function() {
     this.clearOtherActive();
-    this.setState({blogsActive: true});
+    this.setState({pressActive: true});
   },
 
   clearOtherActive: function() {
-    this.setState({servicesActive: false, blogsActive: false});
+    this.setState({servicesActive: false, pressActive: false});
   }
 
 });

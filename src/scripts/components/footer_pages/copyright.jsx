@@ -18,7 +18,7 @@ var Copyright = React.createClass({
                 <li><Link to="/">首页</Link></li>
                 <li><Link to="aboutus">关于我们</Link></li>
                 <li><Link to="services">服务项目</Link></li>
-                <li><a href="#">家政资讯</a></li>
+                <li><Link to="press">家政资讯</Link></li>
                 <li><Link to="contactus">联系我们</Link></li>
               </ul>
             </div>

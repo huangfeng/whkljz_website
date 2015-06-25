@@ -1916,6 +1916,13 @@ ul.social-icons li a:hover {
 	background:#f6f6f6;
 	padding-left:15px;
 }
+
+.sidebar .categories .active {
+	background:#f6f6f6;
+	padding-left:15px;
+	font-weight: bold;
+}
+
 .sidebar h4 {
 	color:#f54828;
 	font-size:19px;
