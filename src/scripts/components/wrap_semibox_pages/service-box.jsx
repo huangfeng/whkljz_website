@@ -3,13 +3,19 @@ var React = require("react"),
 
 var ServiceBox = React.createClass({
 
+  getInitialState: function() {
+    return {
+      activeType : ""
+    };
+  },
+
   render : function() {
     return (
       <section className="service-box topspace30">
   		<div className="container">
   			<div className="row">
   				<div className="col-md-3 text-center animated fadeInLeftNow notransition">
-  					<div className="icon-box-top">
+  					<div className={this.state.activeType == "hourlyWorker" ? "icon-box-top active" : "icon-box-top"}>
   						<i className="fontawesome-icon medium circle-white center fa fa-cutlery"></i>
   						<h1>钟点工服务</h1>
   						<p>
@@ -21,7 +27,7 @@ var ServiceBox = React.createClass({
   					</div>
   				</div>
   				<div className="col-md-3 text-center animated fadeInLeftNow notransition">
-  					<div className="icon-box-top">
+  					<div className={this.state.activeType == "nursemaid" ? "icon-box-top active" : "icon-box-top"}>
   						<i className="fontawesome-icon medium circle-white center fa fa-child"></i>
   						<h1>育婴师、月嫂服务</h1>
   						<p>
@@ -33,7 +39,7 @@ var ServiceBox = React.createClass({
   					</div>
   				</div>
   				<div className="col-md-3 text-center animated fadeInRightNow notransition">
-  					<div className="icon-box-top active">
+  					<div className={this.state.activeType == "nanny" ? "icon-box-top active" : "icon-box-top"}>
   						<i className="fontawesome-icon medium circle-white center fa fa-female"></i>
   						<h1>家庭保姆服务</h1>
   						<p>
@@ -45,7 +51,7 @@ var ServiceBox = React.createClass({
   					</div>
   				</div>
   				<div className="col-md-3 text-center animated fadeInRightNow notransition">
-  					<div className="icon-box-top">
+  					<div className={this.state.activeType == "clearing" ? "icon-box-top active" : "icon-box-top"}>
   						<i className="fontawesome-icon medium circle-white center fa fa-building"></i>
   						<h1>开荒保洁服务</h1>
   						<p>
@@ -60,6 +66,10 @@ var ServiceBox = React.createClass({
   		</div>
   		</section>
     );
+  },
+
+  setActiveType : function(newActiveType) {
+    this.setState({activeType: newActiveType});
   }
 
 });

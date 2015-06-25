@@ -35,6 +35,13 @@ var Services = React.createClass({
 
   componentDidMount : function() {
     this.props.setMenuType && this.props.setMenuType("services");
+    var serviceType = this.props.params.serviceType;
+    this.refs.serviceBox.setActiveType(serviceType);
+  },
+
+  componentWillUpdate : function(nextProps, nextState) {
+    var serviceType = nextProps.params.serviceType;
+    this.refs.serviceBox.setActiveType(serviceType);
   },
 
   render : function() {
@@ -54,7 +61,7 @@ var Services = React.createClass({
             <img src="assets/images/shp.png" className="img-responsive" alt="" />
           </div>
           {serviceItem}
-          <ServiceBox/>
+          <ServiceBox ref="serviceBox"/>
           <Customers/>
           <SemiboxEnd/>
         </div>
