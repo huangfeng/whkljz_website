@@ -140,6 +140,8 @@ var Main = React.createClass({
       this.refs.nav && this.refs.nav.setServicesActive();
     } else if (newMenuType && newMenuType == "blogs") {
       this.refs.nav && this.refs.nav.setBlogsActive();
+    } else {
+      this.refs.nav && this.refs.nav.clearOtherActive();
     }
   }
 

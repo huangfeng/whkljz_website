@@ -6,6 +6,10 @@ var React = require("react"),
 
 var AboutUs = React.createClass({
 
+  componentDidMount : function() {
+    this.props.setMenuType && this.props.setMenuType("about-us");
+  },
+
   render : function() {
     return (
       <section>

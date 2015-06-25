@@ -3,6 +3,9 @@ var React = require("react"),
     Customers = require("../components/wrap_semibox_pages/customers"),
     SemiboxEnd = require("../components/wrap_semibox_pages/semibox-end"),
     HourlyWorker = require("../components/services/hourly-worker"),
+    Nursemaid = require("../components/services/nursemaid"),
+    Nanny = require("../components/services/nanny"),
+    Clearing = require("../components/services/clearing"),
     Link = require("react-router").Link;
 
 var Services = React.createClass({
@@ -16,21 +19,15 @@ var Services = React.createClass({
         },
         "nursemaid": {
           "title": "育婴师、月嫂服务",
-          "info": (
-            <h1 className="smalltitle"><br/><span>育婴师服务简介</span></h1>
-          )
+          "info": <Nursemaid/>
         },
         "nanny": {
           "title": "家庭保姆服务",
-          "info": (
-            <h1 className="smalltitle"><br/><span>家庭保姆服务简介</span></h1>
-          )
+          "info": <Nanny/>
         },
         "clearing": {
           "title": "开荒保洁服务",
-          "info": (
-            <h1 className="smalltitle"><br/><span>开荒保洁服务简介</span></h1>
-          )
+          "info": <Clearing/>
         }
       }
     }
@@ -57,7 +54,6 @@ var Services = React.createClass({
             <img src="assets/images/shp.png" className="img-responsive" alt="" />
           </div>
           {serviceItem}
-          <hr/>
           <ServiceBox/>
           <Customers/>
           <SemiboxEnd/>
@@ -72,20 +68,20 @@ var Services = React.createClass({
       return (<div></div>);
     }
     var serviceItem = this.state.services[serviceType];
-    console.log(serviceItem);
     return (
       <section className="container">
         <div className="col-md-12 animated anim-slide notransition">
           <div className="text-center">
             <h2>{serviceItem.title}</h2>
             <span className="meta bottomspace30">By
-              <Link to="/" title="武汉市洪山区康乐家政管理服务中心" rel="author">武汉市洪山区康乐家政管理服务中心</Link>
-              <span className="bullet">•</span> 2008-8-1
+              <Link to="/" title="武汉市洪山区康乐家政管理服务中心" rel="author"> 武汉市洪山区康乐家政管理服务中心 </Link>
+              <span className="bullet">•</span> 2014-1-1
             </span>
           </div>
           <div className="row">
             <div className="col-md-12">
             {serviceItem.info}
+            <hr/>
             </div>
           </div>
         </div>

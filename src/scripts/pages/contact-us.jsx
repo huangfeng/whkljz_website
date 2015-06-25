@@ -5,6 +5,10 @@ var React = require("react"),
 
 var ContactUs = React.createClass({
 
+  componentDidMount : function() {
+    this.props.setMenuType && this.props.setMenuType("contact-us");
+  },
+
   render : function() {
     return (
       <section>

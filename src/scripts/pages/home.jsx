@@ -4,6 +4,10 @@ var React = require("react"),
 
 var Home = React.createClass({
 
+  componentDidMount : function() {
+    this.props.setMenuType && this.props.setMenuType("home");
+  },
+
   render : function() {
     return (
       <section>
