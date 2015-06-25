@@ -5,12 +5,21 @@ var HourlyWorker = React.createClass({
   getInitialState: function () {
     return {
       priceTable: [
+        {type: "包月", desc: "每周工作六天，周休一天", time:"每次4小时", price:"￥1500-1600元", oneYear: "￥1000元", halfYear:"￥800元", threeMonths: "￥600元", memo: "其中含100元/年双向保险费"},
+        {type: "包月", desc: "每周工作五天，周休两天", time:"每次4小时", price:"￥1400-1500元", oneYear: "￥1000元", halfYear:"￥800元", threeMonths: "￥600元", memo: "其中含100元/年双向保险费"},
+        {type: "包月", desc: "每周工作六天，周休一天", time:"每次3小时", price:"￥1300-1400元", oneYear: "￥1000元", halfYear:"￥800元", threeMonths: "￥600元", memo: "其中含100元/年双向保险费"},
+        {type: "包月", desc: "每周工作五天，周休两天", time:"每次3小时", price:"￥1200-1300元", oneYear: "￥1000元", halfYear:"￥800元", threeMonths: "￥600元", memo: "其中含100元/年双向保险费"},
+        {type: "包月", desc: "每周工作六天，周休一天", time:"每次2小时", price:"￥1000元", oneYear: "￥1000元", halfYear:"￥800元", threeMonths: "￥600元", memo: "其中含100元/年双向保险费"},
+        {type: "包月", desc: "每周工作五天，周休两天", time:"每次2小时", price:"￥900元", oneYear: "￥1000元", halfYear:"￥800元", threeMonths: "￥600元", memo: "其中含100元/年双向保险费"},
+        {type: "固定", desc: "每周一次或两次", time:"每次3小时", price:"￥22元/小时", oneYear: "￥600元", halfYear:"", threeMonths: "", memo: "服务期为一年"},
+        {type: "临时", desc: "随叫随到", time:"3小时以上/次", price:"￥22元/小时", oneYear: "￥600元", halfYear:"", threeMonths: "", memo: ""}
       ]
     };
   },
   render : function() {
       var priceTable = this.state.priceTable.map(function (item, i) {
         return (
+          <tr key={i}>
               <td>{item.type}</td>
               <td>{item.desc}</td>
               <td>{item.time}</td>
