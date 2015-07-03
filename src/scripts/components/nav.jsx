@@ -51,11 +51,11 @@ var Navigation = React.createClass({
             <MenuItemLink to="/service/clearing" eventKey={3.4} onClick={this.setServicesActive}>开荒保洁服务</MenuItemLink>
           </DropdownButton>
           <DropdownButton eventKey={4} title="家政资讯" navItem={true} className={this.state.pressActive ? "active" : ""}>
-            <MenuItemLink to="/" eventKey={4.1} onClick={this.setServicesActive}>康乐公告板</MenuItemLink>
-            <MenuItemLink to="/" eventKey={4.2} onClick={this.setServicesActive}>康乐图片新闻</MenuItemLink>
-            <MenuItemLink to="/" eventKey={4.3} onClick={this.setServicesActive}>生活宝典</MenuItemLink>
-            <MenuItemLink to="/" eventKey={4.4} onClick={this.setServicesActive}>居家饮食</MenuItemLink>
-            <MenuItemLink to="/" eventKey={4.5} onClick={this.setServicesActive}>早教保健</MenuItemLink>
+            <MenuItemLink to="/press/notice" eventKey={4.1} onClick={this.setPressActive}>康乐公告板</MenuItemLink>
+            <MenuItemLink to="/press/news" eventKey={4.2} onClick={this.setPressActive}>康乐图片新闻</MenuItemLink>
+            <MenuItemLink to="/press/life" eventKey={4.3} onClick={this.setPressActive}>生活宝典</MenuItemLink>
+            <MenuItemLink to="/press/food" eventKey={4.4} onClick={this.setPressActive}>居家饮食</MenuItemLink>
+            <MenuItemLink to="/press/health" eventKey={4.5} onClick={this.setPressActive}>早教保健</MenuItemLink>
           </DropdownButton>
           <NavItemLink eventKey={5} to="contactus" onClick={this.clearOtherActive}>联系我们</NavItemLink>
         </Nav>

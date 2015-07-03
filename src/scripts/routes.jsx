@@ -18,6 +18,8 @@ var routes = (
       <Route handler={Services} path="/service/:serviceType" />
     </Route>
     <Route handler={Press} name="press">
+      <Route handler={Press} path="/press/:catalog"/>
+      <Route handler={Press} path="/press/:catalog/:item"/>
     </Route>
     <Route handler={ContactUs} name="contactus" />
   </Route>
