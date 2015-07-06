@@ -1,4 +1,5 @@
 var React = require("react"),
+    Link = require("react-router").Link,
     $ = window.$;
 
 var HomeFeatures = React.createClass({
@@ -74,7 +75,7 @@ var HomeFeatures = React.createClass({
               </i> 怎样选择合适的家政服务员</h4>
               <div className="bottomspace30">
                  回答您关心的几个问题，教您如何选择合适的家政服务员。<br/>
-                 <a href="#" className="readmore">详细了解 <i className="icon-double-angle-right"></i></a>
+                 <Link to="/press/tips/1" className="readmore">详细了解 <i className="icon-double-angle-right"></i></Link>
               </div>
             </div>
             <div className="col-md-6">
@@ -83,7 +84,7 @@ var HomeFeatures = React.createClass({
               <div className="bottomspace30">
                  家政服务中的风险无时不在，为了有效转移和规避这两类风险责任，武汉康乐家政作为被保险人已经投保了雇主
                  责任险和家政经营责任险（单笔意外事故最高赔偿20万元）。<br/>
-                 <a href="#" className="readmore">详细了解 <i className="icon-double-angle-right"></i></a>
+                 <Link to="/press/tips/2" className="readmore">详细了解 <i className="icon-double-angle-right"></i></Link>
               </div>
             </div>
           </div>
@@ -93,7 +94,7 @@ var HomeFeatures = React.createClass({
               </i> 聘请家政人员的流程</h4>
               <div className="bottomspace30">
                 当您想聘请家政人员时，我们提供服务的流程是：接单、匹配、面谈及签约、安排上岗。<br />
-                <a href="#" className="readmore">详细了解 <i className="icon-double-angle-right"></i></a>
+                <Link to="/press/tips/3" className="readmore">详细了解 <i className="icon-double-angle-right"></i></Link>
               </div>
             </div>
             <div className="col-md-6">
@@ -101,7 +102,7 @@ var HomeFeatures = React.createClass({
               </i> 怎样与家政服务员相处</h4>
               <div className="bottomspace30">
                 在日常生活中，给您与家政服务员相处的意见和建议。 <br />
-                <a href="#" className="readmore">详细了解 <i className="icon-double-angle-right"></i></a>
+                <Link to="/press/tips/4" className="readmore">详细了解 <i className="icon-double-angle-right"></i></Link>
               </div>
             </div>
           </div>

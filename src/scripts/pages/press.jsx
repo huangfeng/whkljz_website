@@ -24,12 +24,11 @@ var Press = React.createClass({
 
   render: function() {
     var {catalog, item} = this.props.params;
-    console.log("catalog:" + catalog + "  item:" + item)
     var content = <div></div>
     if (!item) {
-      content = <PressList/>
+      content = <PressList params={this.props.params}/>
     } else {
-      content = <PressItem/>
+      content = <PressItem params={this.props.params}/>
     }
     return (
       <section>

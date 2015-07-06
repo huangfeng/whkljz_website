@@ -1,4 +1,5 @@
 var React = require("react"),
+    Link = require("react-router").Link,
     $ = window.$;
 
 var RecentProjects = React.createClass({
@@ -160,39 +161,39 @@ var RecentProjects = React.createClass({
                 <ul className="unstyled">
                   <li>
                   <div className="post-info">
-                    <h4><a href=""> 热烈庆祝康乐家政中南店搬迁至街道口未来城</a></h4>
+                    <h4><Link to="/press/notice/1"> 热烈庆祝康乐家政中南店搬迁至街道口未来城</Link></h4>
                     <div className="post-meta">
-                       2012年2月1日
+                       2012-2-1
                     </div>
                   </div>
                   </li>
                   <li>
                   <div className="post-info">
-                    <h4><a href=""> 祝康乐家政新老客户及全体员工端午节快乐！</a></h4>
+                    <h4><Link to="/press/notice/2"> 祝康乐家政新老客户及全体员工端午节快乐！</Link></h4>
                     <div className="post-meta">
-                       2011-05-28
+                       2011-5-28
                     </div>
                   </div>
                   </li>
                   <li>
                   <div className="post-info">
-                    <h4><a href=""> 春节临近，找家政得提前一周</a></h4>
+                    <h4><Link to="/press/notice/3"> 春节临近，找家政得提前一周</Link></h4>
                     <div className="post-meta">
-                       2011-01-16
+                       2011-1-16
                     </div>
                   </div>
                   </li>
                   <li>
                   <div className="post-info">
-                    <h4><a href=""> 春节临近，需要年末大扫除的家庭请提早预定</a></h4>
+                    <h4><Link to="/press/notice/4"> 春节临近，需要年末大扫除的家庭请提早预定</Link></h4>
                     <div className="post-meta">
-                       2011-01-03
+                       2011-1-3
                     </div>
                   </div>
                   </li>
                 </ul>
     					</div>
-              <a href="#" className="readmore pull-right">更多… <i className="icon-double-angle-right"></i></a>
+              <Link to="/press/notice" className="readmore pull-right">更多… <i className="icon-double-angle-right"></i></Link>
     				</div>
 
           </div>
