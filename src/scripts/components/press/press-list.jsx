@@ -10,6 +10,16 @@ var PressList = React.createClass({
     };
     var catalog = this.props.params.catalog;
     var category = pressData.lookupCategory(catalog);
+    var imagePath = "assets/images/press/notice.jpg";
+    if (catalog == "food") {
+      imagePath = "assets/images/press/food.jpg";
+    } else if (catalog == "life") {
+      imagePath = "assets/images/press/life.jpg";
+    } else if (catalog == "health") {
+      imagesPath = "assets/images/press/health.jpg";
+    } else if (catalog == "news") {
+      imagePath = null;
+    }
     return (
       <div className="row blogindex">
         <div className="col-md-12">
@@ -20,10 +30,10 @@ var PressList = React.createClass({
             <span className="meta bottomspace30">By <Link to={"/"} title={item.author} rel="author">{item.author}</Link><span className="bullet">·</span> {item.date} </span>
           </div>
           <p className="lead">
-            <img src="assets/images/press/notice.jpg" className="pull-left img-responsive" alt="" style={imageStyle} />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla non pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut eu risus enim, ut pulvinar lectus.
+            <img src={!imagePath ? item.imagePath : imagePath} className="pull-left img-responsive" alt="" style={imageStyle} />
+            <span dangerouslySetInnerHTML={{__html: item.abstract}} />
           </p>
-          <Link to={"/press/${category.name}/${item.id}"} className="btn btn-default">详细内容</Link>
+          <Link to={"/press/" + category.name + "/" + item.id} className="btn btn-default">详细内容</Link>
           <hr className="clearfix" />
         </div>
         ))}

@@ -76,11 +76,11 @@ var RecentProjects = React.createClass({
                   <img src="assets/images/news/news1.jpg" alt=""/>
                   <div className="roll">
                     <div className="wrapcaption">
-                      <a href="projectdetail.html"><i className="icon-link captionicons"></i></a>
+                      <Link to="/press/news/1"><i className="icon-link captionicons"></i></Link>
                       <a data-gal="prettyPhoto[gallery1]" href="assets/images/news/news1.jpg" title="家政经营责任险"><i className="icon-zoom-in captionicons"></i></a>
                     </div>
                   </div>
-                  <h1><a href="projectdetail.html">家政经营责任险</a></h1>
+                  <h1><Link to="/press/news/1">家政经营责任险</Link></h1>
                   <p>
                      当您在选择家政公司时，请务必询问并查验该公司是否购买了保险。
                   </p>
@@ -91,11 +91,11 @@ var RecentProjects = React.createClass({
                   <img src="assets/images/news/news2.jpg" alt=""/>
                   <div className="roll">
                     <div className="wrapcaption">
-                      <a href="projectdetail.html"><i className="icon-link captionicons"></i></a>
+                      <Link to="/press/news/2"><i className="icon-link captionicons"></i></Link>
                       <a data-gal="prettyPhoto[gallery1]" href="assets/images/news/news2.jpg" title="康乐第2期月嫂育婴师培训"><i className="icon-zoom-in captionicons"></i></a>
                     </div>
                   </div>
-                  <h1><a href="projectdetail.html">康乐第2期月嫂育婴师培训</a></h1>
+                  <h1><Link to="/press/news/2">康乐第2期月嫂育婴师培训</Link></h1>
                   <p>
                      育婴员（师）是国家劳动和社会保障部新发布的8个新工种之一。
                   </p>
@@ -106,11 +106,11 @@ var RecentProjects = React.createClass({
                   <img src="assets/images/news/news3.jpg" alt=""/>
                   <div className="roll">
                     <div className="wrapcaption">
-                      <a href="projectdetail.html"><i className="icon-link captionicons"></i></a>
+                      <Link to="/press/news/3"><i className="icon-link captionicons"></i></Link>
                       <a data-gal="prettyPhoto[gallery1]" href="assets/images/news/news3.jpg" title="康乐家政新春团年饭现场"><i className="icon-zoom-in captionicons"></i></a>
                     </div>
                   </div>
-                  <h1><a href="projectdetail.html">康乐家政新春团年饭现场</a></h1>
+                  <h1><Link to="/press/news/3">康乐家政新春团年饭现场</Link></h1>
                   <p>
                      康乐家政是一个快乐、团结的大家庭。
                   </p>
@@ -121,11 +121,11 @@ var RecentProjects = React.createClass({
                   <img src="assets/images/news/news4.jpg" alt=""/>
                   <div className="roll">
                     <div className="wrapcaption">
-                      <a href="projectdetail.html"><i className="icon-link captionicons"></i></a>
+                      <Link to="/press/news/4"><i className="icon-link captionicons"></i></Link>
                       <a data-gal="prettyPhoto[gallery1]" href="assets/images/news/news4.jpg" title="康乐家政岁末大扫除"><i className="icon-zoom-in captionicons"></i></a>
                     </div>
                   </div>
-                  <h1><a href="projectdetail.html">康乐家政岁末大扫除</a></h1>
+                  <h1><Link to="/press/news/4">康乐家政岁末大扫除</Link></h1>
                   <p>
                      过完元旦迎新春，每至此时，大扫除便成了武汉许多家庭的“必修课”。
                   </p>
@@ -136,11 +136,11 @@ var RecentProjects = React.createClass({
                   <img src="assets/images/news/news5.jpg" alt=""/>
                   <div className="roll">
                     <div className="wrapcaption">
-                      <a href="projectdetail.html"><i className="icon icon-link captionicons"></i></a>
+                      <Link to="/press/news/5"><i className="icon icon-link captionicons"></i></Link>
                       <a data-gal="prettyPhoto[gallery1]" href="assets/images/news/news5.jpg" title="庆贺康乐家政街道口店开张"><i className="icon icon-zoom-in captionicons"></i></a>
                     </div>
                   </div>
-                  <h1><a href="projectdetail.html">庆贺康乐家政街道口店开张</a></h1>
+                  <h1><Link to="/press/news/5">庆贺康乐家政街道口店开张</Link></h1>
                   <p>
                      为拓展业务并更好的为江城人民服务，在街道口附近区域另设一分店。
                   </p>
