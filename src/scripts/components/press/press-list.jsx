@@ -16,7 +16,7 @@ var PressList = React.createClass({
     } else if (catalog == "life") {
       imagePath = "assets/images/press/life.jpg";
     } else if (catalog == "health") {
-      imagesPath = "assets/images/press/health.jpg";
+      imagePath = "assets/images/press/health.jpg";
     } else if (catalog == "news") {
       imagePath = null;
     }
