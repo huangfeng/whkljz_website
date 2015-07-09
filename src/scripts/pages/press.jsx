@@ -16,9 +16,7 @@ var Press = React.createClass({
   },
 
   componentWillReceiveProps: function(nextProps) {
-    console.log(nextProps);
     var catalog = nextProps.params.catalog;
-    console.log("will mount: catalog=" + catalog);
     this.setCatalog(catalog);
   },
 
